@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 
@@ -13,15 +14,20 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def read_package_file(path: Path) -> str:
     try:
-        return path.read_text(encoding="utf-8")
+        text = path.read_text(encoding="utf-8")
     except OSError as error:
         raise SystemExit(f"Cannot read {path.relative_to(ROOT)}: {error}")
+    # Accented letters can be stored in two ways. Use one so the checks match.
+    return unicodedata.normalize("NFC", text)
 
 
 SKILL_PATH = ROOT / "SKILL.md"
 SKILL = read_package_file(SKILL_PATH)
 README = read_package_file(ROOT / "README.md")
 CHANGELOG = read_package_file(ROOT / "CHANGELOG.md")
+PT_BR_PATH = "references/pt-br.md"
+PT_BR = read_package_file(ROOT / PT_BR_PATH)
+README_PT_BR = read_package_file(ROOT / "README.pt-BR.md")
 try:
     PLUGIN = json.loads(read_package_file(ROOT / ".claude-plugin" / "plugin.json"))
 except json.JSONDecodeError as error:
@@ -142,5 +148,74 @@ if missing_patterns:
 skill_words = len(SKILL.split())
 if skill_words > 5500:
     raise SystemExit(f"Keep SKILL.md at 5,500 words or fewer; it has {skill_words}")
+
+# The Portuguese reference keeps the SKILL.md numbers and names, so every
+# section reference in SKILL.md also points at the right Portuguese entry.
+# Compare lists, not dicts, so a repeated heading or row fails.
+if PT_BR_PATH not in SKILL:
+    raise SystemExit(f"Tell SKILL.md to read {PT_BR_PATH} for Portuguese text")
+skill_headings = [
+    (int(number), name)
+    for number, name in re.findall(r"(?m)^### ([0-9]+)\. (.+)$", SKILL)
+]
+pt_br_headings = [
+    (int(number), name)
+    for number, name in re.findall(r"(?m)^### ([0-9]+)\. (.+)$", PT_BR)
+]
+if pt_br_headings != skill_headings:
+    raise SystemExit(
+        f"Give {PT_BR_PATH} the same numbered pattern headings as SKILL.md, in the same order"
+    )
+pt_br_labels = [
+    (int(number), label)
+    for number, label in re.findall(
+        r"(?m)^### ([0-9]+)\. .+\n\*Em português: (.+)\*$", PT_BR
+    )
+]
+if [number for number, _ in pt_br_labels] != pattern_numbers:
+    raise SystemExit(
+        f"Put an '*Em português: ...*' label line right under every pattern heading in {PT_BR_PATH}"
+    )
+
+readme_pt_br_rows = [
+    (int(number), label)
+    for number, label in re.findall(r"(?m)^\| ([0-9]+) \| \*\*(.+?)\*\*", README_PT_BR)
+]
+if readme_pt_br_rows != pt_br_labels:
+    expected_labels = dict(pt_br_labels)
+    wrong_labels = [
+        f"{number}: {label!r} should be {expected_labels[number]!r}"
+        for number, label in readme_pt_br_rows
+        if number in expected_labels and label != expected_labels[number]
+    ]
+    raise SystemExit(
+        f"List patterns 1 through {pattern_count} once each, in order, in the "
+        f"README.pt-BR.md tables, using the labels from {PT_BR_PATH}. Rows found: "
+        f"{[number for number, _ in readme_pt_br_rows]}"
+        + (f". Fix these labels: {'; '.join(wrong_labels)}" if wrong_labels else "")
+    )
+if f"## Os {pattern_count} padrões" not in README_PT_BR:
+    raise SystemExit(
+        f"Title the README.pt-BR.md pattern section 'Os {pattern_count} padrões'"
+    )
+
+# Brazilian legal citations use § too ("§ 1º", "§12º"); skip numbers followed
+# by an ordinal sign.
+pt_br_references = sorted(
+    {int(number) for number in re.findall(r"§([0-9]+)(?![0-9º°])", PT_BR)}
+)
+missing_pt_br = [
+    number for number in pt_br_references if not 1 <= number <= pattern_count
+]
+if missing_pt_br:
+    raise SystemExit(
+        f"Point every section reference in {PT_BR_PATH} at a pattern from 1 to "
+        f"{pattern_count}: {missing_pt_br}"
+    )
+
+# On a Portuguese job the agent reads SKILL.md and the reference together.
+pt_br_words = len(PT_BR.split())
+if pt_br_words > 4000:
+    raise SystemExit(f"Keep {PT_BR_PATH} at 4,000 words or fewer; it has {pt_br_words}")
 
 print(f"Humanizer package v{skill_version} is valid")
