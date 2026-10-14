@@ -59,7 +59,7 @@ These are the strongest and most frequent tells in current model prose. Act on o
 ### 1. Not X but Y
 
 **Watch for:** not X but Y; not just, not only, or not merely X, but Y; it's not X, it's Y; the reversed form X rather than Y; the same contrast split across sentences ("This does not mean X. It means Y."); a clipped negative tail ("..., no guessing"). The formula appears in every language; treat the equivalent construction the same way.
-**Problem:** The negative half names something no one claimed, so the positive half sounds larger. It adds weight without adding a claim. State the point directly. Keep a contrast only when the negative half corrects a belief the reader actually holds, or when both halves carry information.
+**Problem:** The negative half names something no one claimed, so the positive half sounds larger. It adds weight without adding a claim. State the point directly. In the "not just X, it's Y" form, X is often the concrete claim and Y the inflation: keep X, and keep Y only when the text says concretely what it means. Keep a contrast only when the negative half corrects a belief the reader actually holds, or when both halves carry information.
 **Before:**
 > It's not just about the beat riding under the vocals; it's part of the aggression and atmosphere. It's not merely a song, it's a statement.
 **After:**
