@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.2.0
+
+- Added Brazilian Portuguese support in `references/pt-br.md`. `SKILL.md` tells the agent to read it when the text to edit is in Portuguese. It keeps the 26 pattern numbers and gives each one Portuguese watch lists, the rules that change in Portuguese, and Brazilian examples. The sources are Brazilian: the Portuguese Wikipedia essay on signs of AI text, the Linguagem Simples law, the Presidência and Senado style manuals, INEP's ENEM guide, and Brazilian reporting and research.
+- Rules that change in Portuguese: dialogue dashes stay, and a typed spaced hyphen is not a tell (#8). A subject pronoun in every sentence counts as a translation trace (#7). #10 holds conventions from another language or variant instead of the English hyphen rule. Title case counts for more (#20). The ENEM-essay ending and stock citations fall under #13 and #17. Common connectives such as "além disso" count only in groups (#12).
+- Added `README.pt-BR.md`. The validator now checks that the reference's headings and labels match `SKILL.md` and the Portuguese README table, and caps the reference at 4,000 words.
+
 ## 3.1.0
 
 - Added pattern #26 and section F for replies that re-explain context the reader already has (#269). It acts on replies, not standalone writing. 26 patterns total.

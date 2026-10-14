@@ -11,7 +11,9 @@ Keep the skill portable. Do not write instructions that limit it to one or two a
 ## Key files
 
 - `SKILL.md` is the source of truth and the repo's only skill file. It contains portable YAML metadata, an account of why AI text sounds the way it does, and numbered patterns grouped in six sections and ordered by strength and frequency.
+- `references/pt-br.md` is the Brazilian Portuguese reference that `SKILL.md` tells the agent to read for Portuguese text. It is not a second skill and has no YAML metadata. It keeps the `SKILL.md` pattern headings and adds an `*Em português: ...*` label, Portuguese watch lists, the rules that change in Portuguese, and Brazilian examples.
 - `README.md` explains installation, use, and patterns.
+- `README.pt-BR.md` explains the same in Portuguese and lists the Brazilian sources.
 - `CHANGELOG.md` holds the release notes, newest first. Old notes keep the pattern numbers their release used.
 - `.claude-plugin/plugin.json` describes the Claude plugin and points its skill loader at the root `SKILL.md`.
 - `.claude-plugin/marketplace.json` lets users add this repo as a Claude marketplace.
@@ -24,10 +26,11 @@ Keep the skill portable. Do not write instructions that limit it to one or two a
 Keep `SKILL.md` and `README.md` in sync.
 
 - **Patterns:** Patterns are numbered from 1 without gaps, strongest and most frequent first. A new tell earns a pattern only when no existing pattern already implies it; prefer folding it into an existing pattern. If you add, remove, or renumber a pattern, update the README tables, the README section title, and every §reference. The validator derives the count from the headings and checks that README pattern names match them.
+- **Portuguese:** When a pattern changes, update its heading, label, and entry in `references/pt-br.md`, and the table and section title in `README.pt-BR.md`. The validator checks that the headings match `SKILL.md` and that the Portuguese table uses the labels. Portuguese watch lists and examples must come from Brazilian usage and sources, not from translating the English lists.
 - **Version:** Keep the same version in `SKILL.md` under `metadata.version`, the first `CHANGELOG.md` heading, `.claude-plugin/plugin.json`, and `.cursor-plugin/plugin.json`. Do not add a top-level `version` field to the skill.
 - **Compatibility:** Keep install and use instructions neutral across agents. Names such as Claude Code, Cursor, OpenCode, and Codex are examples, not limits.
 - **Description:** The plugin manifests use the first sentence of the `SKILL.md` description.
-- **Length:** Every word of `SKILL.md` is read on each use. The validator caps it at 5,500 words; a change that adds words should earn them.
+- **Length:** Every word of `SKILL.md` is read on each use. The validator caps it at 5,500 words; a change that adds words should earn them. On a Portuguese job the agent also reads `references/pt-br.md`, which the validator caps at 4,000 words.
 - **History:** Add a short `CHANGELOG.md` note for any behavior change or non-obvious fix.
 - **Checks:** Before publishing, run `python3 scripts/validate-package.py`, `npx skills add . --list`, and `claude plugin validate .`.
 

@@ -2,6 +2,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/blader/humanizer?style=flat)](https://github.com/blader/humanizer/stargazers) [![skills.sh installs](https://skills.sh/b/blader/humanizer)](https://skills.sh/blader/humanizer)
 
+[Leia em português](README.pt-BR.md)
+
 Humanizer makes AI-written text sound like a person wrote it, without changing what it says. It is built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), the guide Wikipedia editors use to catch AI-generated text, and it works in Claude Code, Codex, and any other agent that supports skills.
 
 **Before:**
@@ -55,7 +57,7 @@ Download this repository as a ZIP (**Code → Download ZIP**) and upload it as a
 npx skills add blader/humanizer --global --agent '*'
 ```
 
-This installs Humanizer for every agent the Skills CLI supports, including Gemini CLI, GitHub Copilot, and Windsurf. Leave off `--global` in any command above to install it only in the current project. For an agent the Skills CLI does not know, copy `SKILL.md` into its skill folder.
+This installs Humanizer for every agent the Skills CLI supports, including Gemini CLI, GitHub Copilot, and Windsurf. Leave off `--global` in any command above to install it only in the current project. For an agent the Skills CLI does not know, copy `SKILL.md` and the `references/` folder into its skill folder.
 
 ## Usage
 
@@ -105,6 +107,10 @@ A language model writes whatever is most likely to come next, so by default it m
 Humanizer marks every tell it finds, strongest first. It drafts a rewrite without treating the original structure as fixed, checks the draft against the patterns and the original claims, and then writes the final version. It does not make things up. A name, number, date, quote, citation, or other factual detail must come from the source or the writer, and if a sentence needs a detail that is missing, Humanizer asks instead of inventing one.
 
 When you paste text, Humanizer shows its work: the first rewrite, a short critique of anything that still sounds artificial, and the final version. Point it at a file and it changes only the prose, leaving code, data, frontmatter, and link targets alone. Personal writing keeps the writer's opinions and quirks. Technical and reference prose stays neutral and plain.
+
+## Brazilian Portuguese
+
+Humanizer also handles Brazilian Portuguese. When the text is in Portuguese, the skill reads [`references/pt-br.md`](references/pt-br.md). That file keeps the same 26 pattern numbers and gives the Portuguese watch lists, the rules that change in Portuguese, and Brazilian examples. It draws on the Portuguese Wikipedia essay on signs of AI text, Brazilian style manuals, and research on AI text in Portuguese. For example, it leaves dialogue dashes alone, treats a subject pronoun in every sentence as a translation trace, and cuts the stock ENEM-essay ending from anything that is not a school essay. [README.pt-BR.md](README.pt-BR.md) explains it in Portuguese.
 
 ## The 26 patterns
 
@@ -194,6 +200,7 @@ The patterns are numbered by strength and frequency. The first five justify an e
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) is the source for the pattern list.
 - [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) maintains the page.
+- [Wikipédia: Sinais de texto gerado por inteligência artificial](https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Sinais_de_texto_gerado_por_intelig%C3%AAncia_artificial) is the main source for the Portuguese reference. [README.pt-BR.md](README.pt-BR.md#fontes) lists the Brazilian sources.
 
 ## Version history
 
