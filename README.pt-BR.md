@@ -138,7 +138,7 @@ Os padrões seguem a ordem de força e frequência. Os cinco primeiros justifica
 
 | # | Padrão | Antes | Depois |
 |---|--------|-------|--------|
-| 12 | **Palavras gastas pela IA** | "tapeçaria", "mergulhar", "alavancar", "outrossim", "além disso... nesse sentido... vale ressaltar" | Use palavras comuns |
+| 12 | **Palavras gastas pela IA** | "tapeçaria", "desvendar", "alavancar", "outrossim", "além disso... nesse sentido... vale ressaltar" | Use palavras comuns |
 | 13 | **Importância inflada** | "um divisor de águas", "Diante do exposto, cabe ao Estado..." | Mantenha o fato e corte a importância; termine no último fato concreto |
 | 14 | **Ligação vaga** | "associado a", "no âmbito de" | Diga a relação que a fonte dá |
 | 15 | **Gerúndios de enfeite** | "refletindo... simbolizando... o que reforça a importância de" | Mantenha só o que a fonte sustenta |

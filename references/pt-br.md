@@ -19,9 +19,9 @@ The default choice described in `SKILL.md` explains most of it. Two pulls add Br
 
 - Keep the register. Informal text keeps "a gente", "pra", "tá", and "né". Do not make it formal, and do not add slang the writer did not use.
 - Use the spelling of the 1990 Orthographic Agreement.
-- Do not chop Portuguese into short English-style sentences. Brazilian prose runs longer than model text, with more commas and subordinate clauses, and its sentence length varies more. A short sentence is fine; a row of them is a tell.
+- Do not chop Portuguese into short English-style sentences. Brazilian prose runs longer than model text, with more commas and subordinate clauses, and its sentence length varies more. A short sentence is fine; merge a row of them.
 - Prefer a verb to a string of adjectives.
-- Write the list of remaining patterns in the user's language, using the labels below.
+- Write the list of remaining patterns in the user's language, naming each pattern by its *Em português* label.
 
 ## A. Staging instead of stating
 
@@ -92,7 +92,7 @@ The default choice described in `SKILL.md` explains most of it. Two pulls add Br
 ### 7. Repeated sentence openings
 *Em português: Frases que começam igual*
 
-**PT-BR note:** Stronger in Portuguese. The verb ending already shows the subject, so a writer drops "ele", "ela", "eu", or "você" once the subject is clear. A pronoun in every sentence is a translation trace, even when the sentences do not start with it.
+**PT-BR note:** Stronger in Portuguese. The verb ending already shows the subject, so a writer drops "ele", "ela", "eu", or "você" once the subject is clear. A pronoun in every sentence is a translation trace, even when the sentences do not start with it. Recheck §7 in step 3 along with the patterns `SKILL.md` lists there.
 **Before:**
 > Ela abriu a porta. Ela viu a fechadura quebrada. Ela guardou os dois detalhes.
 **After:**
@@ -146,8 +146,8 @@ The default choice described in `SKILL.md` explains most of it. Two pulls add Br
 ### 12. Overused AI words
 *Em português: Palavras gastas pela IA*
 
-**Watch for (a tell wherever it appears):** adicionalmente (opening a sentence), alinhar-se com, aprofundar-se and mergulhar (figurative), desvendar, intrincado, meticuloso, vibrante, multifacetado, tapeçaria (figurative), testemunho (figurative), robusto (figurative), alavancar, potencializar, viabilizar, agregar valor, navegar (figurative), jornada (figurative), ecossistema (figurative), cenário and panorama (abstract); old formal words such as destarte, outrossim, mister se faz, supracitado, indubitavelmente, and doravante.
-**Count only in groups:** crucial, fundamental, essencial, garantir, otimizar, implementar; formal words that replace plain ones ("redigiu" for escreveu, "faleceu" for morreu, "utilizou" for usou, "efetuou" for fez); and the connectives além disso, ademais, vale ressaltar que, é importante destacar que, nesse sentido, nesse contexto, dessa forma, em suma, em resumo.
+**Watch for (a tell wherever it appears):** adicionalmente (opening a sentence), alinhar-se com, desvendar, intrincado, meticuloso, vibrante, multifacetado, tapeçaria (figurative), testemunho (figurative), robusto (figurative), alavancar, potencializar, viabilizar, agregar valor, navegar (figurative), jornada (figurative), ecossistema (figurative), cenário and panorama (abstract); old formal words such as destarte, outrossim, mister se faz, supracitado, indubitavelmente, and doravante.
+**Count only in groups:** crucial, fundamental, essencial, garantir, otimizar, implementar, aprofundar-se and mergulhar (figurative; "mergulhar de cabeça" is an old idiom, and "vamos mergulhar" is §4); formal words that replace plain ones ("redigiu" for escreveu, "faleceu" for morreu, "utilizou" for usou, "efetuou" for fez); and the connectives além disso, ademais, vale ressaltar que, é importante destacar que, nesse sentido, nesse contexto, dessa forma, em suma, em resumo.
 **PT-BR note:** Brazilian writers use the second list, and students learn the connectives for the ENEM essay. Models stack them. INEP itself tells candidates not to use connectives "de forma artificial ou excessiva".
 **Before:**
 > Além disso, vale ressaltar que a culinária mineira constitui uma rica tapeçaria de sabores. Nesse sentido, o pão de queijo é um testemunho duradouro da influência das fazendas no cenário gastronômico local, evidenciando como essas receitas se integraram ao cotidiano.
@@ -158,7 +158,7 @@ The default choice described in `SKILL.md` explains most of it. Two pulls add Br
 *Em português: Importância inflada*
 
 **Watch for:** um marco; divisor de águas; momento crucial; desempenha um papel fundamental; reflete um movimento mais amplo; deixou um legado duradouro; deixou uma marca indelével; abre caminho para; em constante evolução; na era digital; em um mundo cada vez mais conectado; no cenário atual; stock sections such as "Impacto e legado", "Desafios e perspectivas", "Prêmios e reconhecimento", or a paragraph that opens "Apesar dos desafios..."; send-offs such as "o futuro é promissor" and "um passo na direção certa".
-**PT-BR note:** The Brazilian send-off is the ENEM "proposta de intervenção": a closing paragraph that gives a vague task to a vague agent. Watch for "Diante do exposto", "Portanto, faz-se necessário que", "Cabe ao Estado, em parceria com a sociedade civil,", "por meio de campanhas de conscientização", and "Só assim será possível construir uma sociedade mais justa". Outside a school essay, cut it and end on the last concrete fact. Inside a school essay the genre requires the proposal, so make it concrete instead.
+**PT-BR note:** The Brazilian send-off is the ENEM "proposta de intervenção": a closing paragraph that gives a vague task to a vague agent. Watch for "Diante do exposto", "Portanto, faz-se necessário que", "Cabe ao Estado, em parceria com a sociedade civil,", "por meio de campanhas de conscientização", and "Só assim será possível construir uma sociedade mais justa". Outside a school essay, cut the template and end on the last concrete fact; if the paragraph holds the writer's own recommendation, keep it in one plain sentence. Inside a school essay the genre requires the proposal, so make it concrete instead.
 **Before:**
 > O Instituto Butantan foi fundado em 1901, marcando um divisor de águas na saúde pública brasileira e deixando um legado duradouro.
 **After:**
