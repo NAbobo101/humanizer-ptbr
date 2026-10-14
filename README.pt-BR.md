@@ -193,6 +193,10 @@ Os padrões seguem a ordem de força e frequência. Os cinco primeiros justifica
 >
 > Eu voltaria, da próxima vez fora das férias e com sapatos melhores.
 
+## Mais exemplos
+
+[`examples/pt-br.md`](examples/pt-br.md) traz cinco textos sobre assuntos de outubro de 2026: o Enem, os 30 anos da urna eletrônica, um post de LinkedIn sobre inteligência artificial, um comunicado de Dia do Professor e dicas para o feriado em Aparecida. Cada um aparece como um modelo de linguagem o escreveu, sem a skill, e depois como o Humanizer o reescreveu, com a lista do que ele marcou.
+
 ## Fontes
 
 Equivalentes brasileiros das referências do projeto original:

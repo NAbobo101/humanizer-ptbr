@@ -14,6 +14,7 @@ Keep the skill portable. Do not write instructions that limit it to one or two a
 - `references/pt-br.md` is the Brazilian Portuguese reference that `SKILL.md` tells the agent to read for Portuguese text. It is not a second skill and has no YAML metadata. It keeps the `SKILL.md` pattern headings and adds an `*Em português: ...*` label, Portuguese watch lists, the rules that change in Portuguese, and Brazilian examples.
 - `README.md` explains installation, use, and patterns.
 - `README.pt-BR.md` explains the same in Portuguese and lists the Brazilian sources.
+- `examples/pt-br.md` shows five Portuguese texts as a model wrote them and as the skill rewrote them. Regenerate the pairs rather than edit them by hand.
 - `CHANGELOG.md` holds the release notes, newest first. Old notes keep the pattern numbers their release used.
 - `.claude-plugin/plugin.json` describes the Claude plugin and points its skill loader at the root `SKILL.md`.
 - `.claude-plugin/marketplace.json` lets users add this repo as a Claude marketplace.
