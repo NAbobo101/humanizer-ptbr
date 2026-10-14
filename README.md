@@ -110,7 +110,7 @@ When you paste text, Humanizer shows its work: the first rewrite, a short critiq
 
 ## Brazilian Portuguese
 
-Humanizer also handles Brazilian Portuguese. When the text is in Portuguese, the skill reads [`references/pt-br.md`](references/pt-br.md). That file keeps the same 26 pattern numbers and gives the Portuguese watch lists, the rules that change in Portuguese, and Brazilian examples. It draws on the Portuguese Wikipedia essay on signs of AI text, Brazilian style manuals, and research on AI text in Portuguese. For example, it leaves dialogue dashes alone, treats a subject pronoun in every sentence as a translation trace, and cuts the stock ENEM-essay ending from anything that is not a school essay. [README.pt-BR.md](README.pt-BR.md) explains it in Portuguese.
+Humanizer also handles Brazilian Portuguese. When the text is in Portuguese, the skill reads [`references/pt-br.md`](references/pt-br.md). That file keeps the same 26 pattern numbers and gives the Portuguese watch lists, the rules that change in Portuguese, and Brazilian examples. It draws on the Portuguese Wikipedia essay on signs of AI text, Brazilian style manuals, and research on AI text in Portuguese. For example, it leaves dialogue dashes alone, treats a subject pronoun in every sentence as a translation trace, and cuts the stock ENEM-essay ending from anything that is not a school essay. [README.pt-BR.md](README.pt-BR.md) explains it in Portuguese, and [examples/pt-br.md](examples/pt-br.md) shows five Portuguese texts before and after a rewrite.
 
 ## The 26 patterns
 
