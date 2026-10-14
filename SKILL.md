@@ -46,7 +46,7 @@ Without a sample, take the voice from the kind of text. Blog posts, essays, opin
 
 ### What to return
 
-**Pasted text (default).** Return the draft, a short list of remaining patterns, and the final rewrite.
+**Pasted text (default).** Return the draft, a short list of the patterns that remain in the draft (what step 3 found), and the final rewrite.
 
 **File mode.** When the user names a file, run the full process but write only the final text to the file. Change prose only. Keep code blocks, inline code, commands, paths, YAML metadata, data, and link targets unchanged. Then give the user a short summary.
 
